@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 id="title">Carwyn Codes</h1>
+  <div id="title">
+    <h1><NuxtLink to="/">Carwyn Codes</NuxtLink></h1>
     <AppBar />
   </div>
   <slot />
@@ -11,10 +11,20 @@
 html {
   background: #000;
 }
+
+a:link,
+a:visited,
 #title,
 #navbar,
 #navbar-footer {
-  font-family: monospace;
+  font-family: monospace, sans-serif;
   color: #fafafa;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover,
+a:active {
+  color: #bbb;
 }
 </style>

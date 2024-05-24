@@ -2,5 +2,8 @@
 definePageMeta({
     layout: 'default'
 })
+useHead({
+    title: 'Uses'
+})
 </script>
 <template></template>
