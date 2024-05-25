@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: 'default'
+    layout: 'default',
+    title: 'uses'
 })
 useHead({
     title: 'Uses'

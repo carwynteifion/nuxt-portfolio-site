@@ -1,9 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: 'default'
+    layout: 'default',
+    title: 'Contact'
 })
 useHead({
-    title: 'Blog'
+    title: 'Contact'
 })
 </script>
 <template></template>
