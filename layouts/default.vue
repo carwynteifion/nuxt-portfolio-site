@@ -44,6 +44,8 @@ a:visited,
 
 main {
   height: 79vh;
+  font-family: monospace, sans-serif;
+  color: #fafafa;
 }
 
 #footer {
