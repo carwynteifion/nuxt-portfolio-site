@@ -1,10 +1,19 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: 'default',
-    title: 'Projects'
-})
+  layout: "default",
+  title: "Projects",
+});
 useHead({
-    title: 'Projects'
-})
+  title: "Projects",
+});
 </script>
-<template></template>
+<template>
+  <div class="flex-container">
+    <div class="white-curved-border">
+      <div id="hello">
+        <h3><NuxtLink to="https://github.com/carwynteifion/nuxt-portfolio-site" external>Portfolio website</NuxtLink></h3>
+        <p>This website! Click the title to view the source code.</p>
+      </div>
+    </div>
+  </div>
+</template>
