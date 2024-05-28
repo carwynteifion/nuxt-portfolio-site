@@ -29,12 +29,12 @@ html {
   background: #000;
 }
 
-a:link,
-a:visited,
-#title,
+#footer,
 #navbar,
 #navbar-footer,
-#footer {
+#title,
+a:link,
+a:visited {
   bottom: 0;
   font-family: monospace, sans-serif;
   color: #fafafa;
@@ -44,37 +44,37 @@ a:visited,
 
 main {
   height: 79vh;
-  font-family: monospace, sans-serif;
-  color: #fafafa;
+}
+
+#footer,
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 body {
   clear: both;
 }
 
-a:hover,
-a:active {
+a:active,
+a:hover {
   color: #bbb;
 }
 
-p,
+form,
 h3,
-form {
+main,
+p {
   font-family: monospace, sans-serif;
   color: #fafafa;
 }
 
 .flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 

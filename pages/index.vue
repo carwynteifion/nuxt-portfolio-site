@@ -52,7 +52,8 @@ useHead({
       </div>
       <div>
         <p>
-          Get in touch with me about your project by using the contact form below, or by
+          Get in touch with me about your project by using the contact form
+          below, or by
           <NuxtLink to="mailto:hello@carwyncodes.dev">emailing me</NuxtLink>.
         </p>
       </div>
@@ -61,11 +62,18 @@ useHead({
       <h3>Contact me</h3>
       <form ref="form" @submit.prevent="sendEmail">
         <label>Name</label><br />
-        <input type="text" name="user_name" required/><br />
+        <input type="text" name="user_name" required /><br />
         <label>Email address</label><br />
-        <input type="email" name="user_email" required/><br />
+        <input type="email" name="user_email" required /><br />
         <label>Your message</label><br />
-        <textarea name="message" placeholder="Your enquiry here..." rows="4" cols="28" maxlength="250"></textarea><br />
+        <textarea
+          name="message"
+          placeholder="Your enquiry here..."
+          rows="4"
+          cols="28"
+          maxlength="250"
+        ></textarea
+        ><br />
         <div id="submit">
           <input id="submit-button" type="submit" value="Send" />
         </div>
@@ -79,31 +87,39 @@ a {
   text-decoration: underline !important;
 }
 
-a:hover,
-a:active {
-  color: magenta !important;
+a:active,
+a:hover {
+  color: #f0f !important;
 }
 
 textarea {
   resize: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  width: 97%;
 }
 
 #submit {
   text-align: center;
+}
+
+#submit,
+#submit-button,
+input,
+textarea {
   font-family: monospace, sans-serif;
 }
 
-input, textarea {
+input {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-family: monospace, sans-serif;
   font-size: 1rem;
   width: 97%;
 }
 
 #submit-button {
   color: #fafafa;
-  font-family: monospace, sans-serif;
   background: #000;
   border-radius: 5px;
   border: 1px solid #fafafa;
@@ -111,5 +127,4 @@ input, textarea {
   max-width: fit-content;
   padding: 5px 10px;
 }
-
 </style>

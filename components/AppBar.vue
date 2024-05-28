@@ -7,18 +7,18 @@
 </template>
 
 <style scoped>
-#home-link:hover,
-#home-link:active {
+#home-link:active,
+#home-link:hover {
   color: red;
 }
 
-#projects-link:hover,
-#projects-link:active {
-  color: yellow;
+#projects-link:active,
+#projects-link:hover {
+  color: #ff0;
 }
 
-#uses-link:hover,
-#uses-link:active {
-  color: cyan;
+#uses-link:active,
+#uses-link:hover {
+  color: #0ff;
 }
 </style>
