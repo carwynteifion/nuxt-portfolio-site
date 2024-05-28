@@ -14,7 +14,7 @@
 footer {
   width: 100%;
   border-top: 1px solid #fafafa;
-  padding: 20px;
+  padding: 20px 0 5px 0;
   background: #000;
 }
 </style>

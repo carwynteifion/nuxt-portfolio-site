@@ -43,7 +43,7 @@ a:visited,
 }
 
 main {
-  height: 80vh;
+  height: 79vh;
 }
 
 #footer {
