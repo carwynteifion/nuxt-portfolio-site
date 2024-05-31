@@ -5,6 +5,9 @@ useHead({
   meta: [
     { property: "og:title", content: `Carwyn Codes - ${route.meta.title}` },
   ],
+  htmlAttrs: {
+    lang: 'en'
+  }
 });
 </script>
 
@@ -12,15 +15,13 @@ useHead({
   <body>
     <header id="title">
       <h1><NuxtLink to="/">Carwyn Codes</NuxtLink></h1>
-      <h3>Full-stack solutions</h3>
+      <h2>Full-stack solutions</h2>
+      <h3>hello(at)carwyncodes(dot)dev</h3>
       <AppBar />
     </header>
     <main>
       <slot />
     </main>
-    <div id="footer">
-      <AppFooter />
-    </div>
   </body>
 </template>
 
@@ -29,7 +30,6 @@ html {
   background: #000;
 }
 
-#footer,
 #navbar,
 #navbar-footer,
 #title,
@@ -46,15 +46,11 @@ main {
   height: 79vh;
 }
 
-#footer,
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#footer {
-  width: 100%;
+  flex-direction: column;
 }
 
 body {
@@ -72,10 +68,6 @@ main,
 p {
   font-family: monospace, sans-serif;
   color: #fafafa;
-}
-
-.flex-container {
-  flex-direction: column;
 }
 
 .white-curved-border {

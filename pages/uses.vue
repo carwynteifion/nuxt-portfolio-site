@@ -1,10 +1,11 @@
 <script setup lang="ts">
+useHead({
+  title: "Uses",
+});
+
 definePageMeta({
   layout: "default",
   title: "uses",
-});
-useHead({
-  title: "Uses",
 });
 
 function stringDate(input: string | number | Date) {
@@ -59,6 +60,7 @@ let backend = [
 <template>
   <div class="flex-container">
     <header>
+      <h2>Uses</h2>
       <h3>Frontend</h3>
     </header>
   </div>

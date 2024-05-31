@@ -1,14 +1,17 @@
 <script setup lang="ts">
+useHead({
+  title: "Projects",
+});
+
 definePageMeta({
   layout: "default",
   title: "Projects",
 });
-useHead({
-  title: "Projects",
-});
 </script>
+
 <template>
   <div class="flex-container">
+    <h2>Projects</h2>
     <div class="white-curved-border">
       <div id="hello">
         <h3>
