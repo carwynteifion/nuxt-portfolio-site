@@ -6,8 +6,8 @@ useHead({
     { property: "og:title", content: `Carwyn Codes - ${route.meta.title}` },
   ],
   htmlAttrs: {
-    lang: 'en'
-  }
+    lang: "en",
+  },
 });
 </script>
 
