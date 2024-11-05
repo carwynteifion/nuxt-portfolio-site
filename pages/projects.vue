@@ -38,7 +38,7 @@ definePageMeta({
           </NuxtLink>
         </h3>
         <p>
-          My first project! I built a user-centric site for a Bristol-based
+          My first paid project! I built a user-centric site for a Bristol-based
           housing association charity, focused on housing people with additional
           or complex needs.
         </p>
