@@ -3,7 +3,14 @@ const route = useRoute();
 
 useHead({
   meta: [
-    { property: "og:title", content: `Carwyn Codes - ${route.meta.title}` },
+    {
+      property: "og:title",
+      content: `Carwyn Codes - ${route.meta.title}`,
+    },
+    {
+      property: "og:description",
+      content: `Simple, creative and elegant full-stack solutions.`,
+    },
   ],
   htmlAttrs: {
     lang: "en",
