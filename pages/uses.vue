@@ -102,7 +102,7 @@ let others = [
   </div>
   <div>
     <section class="flex-container">
-      <div v-for="item in frontend">
+      <div v-for="item in frontend" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
@@ -121,7 +121,7 @@ let others = [
       </header>
     </div>
     <section class="flex-container">
-      <div v-for="item in backend">
+      <div v-for="item in backend" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
@@ -140,7 +140,7 @@ let others = [
       </header>
     </div>
     <section class="flex-container">
-      <div v-for="item in cloud">
+      <div v-for="item in cloud" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
@@ -159,7 +159,7 @@ let others = [
       </header>
     </div>
     <section class="flex-container">
-      <div v-for="item in others">
+      <div v-for="item in others" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
