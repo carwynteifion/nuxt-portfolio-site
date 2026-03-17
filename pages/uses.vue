@@ -41,6 +41,11 @@ let frontend = [
     icon: "logos:javascript",
     yearStarted: "2021-05-01",
   },
+  {
+    text: "TypeScript",
+    icon: "logos:typescript-icon",
+    yearStarted: "2023-09-11",
+  }
 ];
 
 let backend = [
@@ -54,6 +59,37 @@ let backend = [
     icon: "material-symbols:database",
     yearStarted: "2021-05-01",
   },
+  {
+    text: "PHP",
+    icon: "logos:php",
+    yearStarted: "2025-05-01",
+  },
+  {
+    text: "Python",
+    icon: "logos:python",
+    yearStarted: "2021-05-01",
+  }
+];
+
+let cloud = [
+  {
+    text: "Azure",
+    icon: "logos:microsoft-azure",
+    yearStarted: "2023-09-11",
+  }
+];
+
+let others = [
+  {
+    text: "Git",
+    icon: "logos:git-icon",
+    yearStarted: "2021-05-01",
+  },
+  {
+    text: "Docker",
+    icon: "logos:docker-icon",
+    yearStarted: "2023-09-11",
+  }
 ];
 </script>
 
@@ -66,7 +102,7 @@ let backend = [
   </div>
   <div>
     <section class="flex-container">
-      <div v-for="item in frontend">
+      <div v-for="item in frontend" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
@@ -85,7 +121,45 @@ let backend = [
       </header>
     </div>
     <section class="flex-container">
-      <div v-for="item in backend">
+      <div v-for="item in backend" :key="item.text">
+        <div class="white-curved-border">
+          <div class="icon">
+            <Icon :name="item.icon" />
+          </div>
+          <div class="text">
+            <span>{{ item.text }}</span
+            ><br />
+            <span>{{ stringDate(item.yearStarted) }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex-container">
+      <header>
+        <h3>Cloud</h3>
+      </header>
+    </div>
+    <section class="flex-container">
+      <div v-for="item in cloud" :key="item.text">
+        <div class="white-curved-border">
+          <div class="icon">
+            <Icon :name="item.icon" />
+          </div>
+          <div class="text">
+            <span>{{ item.text }}</span
+            ><br />
+            <span>{{ stringDate(item.yearStarted) }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex-container">
+      <header>
+        <h3>Other tools</h3>
+      </header>
+    </div>
+    <section class="flex-container">
+      <div v-for="item in others" :key="item.text">
         <div class="white-curved-border">
           <div class="icon">
             <Icon :name="item.icon" />
