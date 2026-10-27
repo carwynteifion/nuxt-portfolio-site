@@ -1,19 +1,37 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
-const zorkUrl =
-  "https://iplayif.com/?story=https%3A%2F%2Feblong.com%2Finfocom%2Fgamefiles%2Fzork1-invclues-r52-s871125.z5";
-
 export function useZorkEasterEgg() {
   const typedWord = ref("");
   const commandFeedback = ref("");
+  const isGameOpen = ref(false);
 
   function clearCommandFeedback() {
     commandFeedback.value = "";
   }
 
-  function launchZork() {
-    window.open(zorkUrl, "_blank", "noopener,noreferrer");
+  function clearInput() {
     typedWord.value = "";
+    clearCommandFeedback();
+  }
+
+  function submitCommand() {
+    if (typedWord.value.trim().toLowerCase() === "zork") {
+      isGameOpen.value = true;
+      clearInput();
+    } else if (typedWord.value.trim()) {
+      commandFeedback.value = "A hollow voice echoes: FOOL.";
+      typedWord.value = "";
+    }
+  }
+
+  function closeGame() {
+    isGameOpen.value = false;
+  }
+
+  function handleInput() {
+    if (typedWord.value.length > 64) {
+      typedWord.value = typedWord.value.slice(0, 64);
+    }
     clearCommandFeedback();
   }
 
@@ -33,12 +51,7 @@ export function useZorkEasterEgg() {
     }
 
     if (event.key === "Enter") {
-      if (typedWord.value.trim().toLowerCase() === "zork") {
-        launchZork();
-      } else if (typedWord.value.trim()) {
-        commandFeedback.value = "A hollow voice echoes: FOOL.";
-        typedWord.value = "";
-      }
+      submitCommand();
       return;
     }
 
@@ -49,8 +62,7 @@ export function useZorkEasterEgg() {
     }
 
     if (event.key === "Escape") {
-      typedWord.value = "";
-      clearCommandFeedback();
+      clearInput();
       return;
     }
 
@@ -65,5 +77,13 @@ export function useZorkEasterEgg() {
   onMounted(() => window.addEventListener("keydown", handleKeydown));
   onBeforeUnmount(() => window.removeEventListener("keydown", handleKeydown));
 
-  return { typedWord, commandFeedback };
+  return {
+    typedWord,
+    commandFeedback,
+    isGameOpen,
+    clearInput,
+    closeGame,
+    handleInput,
+    submitCommand,
+  };
 }

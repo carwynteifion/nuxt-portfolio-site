@@ -19,7 +19,7 @@
     "@nuxt/icon": "^2.6.1"
   },
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=26.0.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true
